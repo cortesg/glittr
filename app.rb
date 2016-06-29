@@ -26,7 +26,6 @@ post "/sign-in" do #post hides what would display in URL
 	else
 		flash[:error] = "FAILED SIGN IN."
 		redirect "/login-failed"
-	#params.inspect #puts
 	end
 end
 
@@ -50,8 +49,13 @@ get "/login-failed" do
 	# "login failed"
 end
 
-def current_user     
-	if session[:user_id]       
-		@current_user = User.find(session[:user_id])     
-	end   
-end
+# get "/sign-out" do 
+# 	flash[:notice] = "You have signed out."
+# 	redirect "/"
+# end
+
+# def current_user     
+# 	if session[:user_id]       
+# 		@current_user = User.find(session[:user_id])     
+# 	end   
+# end
