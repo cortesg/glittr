@@ -19,7 +19,7 @@ end
 
 post "/sign-in" do #post hides what would display in URL
 	@user = User.where(username: params[:username]).first  #.first to get rid of array
-	if @pirate && @pirate.password == params[:password]
+	if @user && @user.password == params[:password]
 		session[:user_id] = @user.id
 		flash[:notice] = "You've been signed in successfully."
 		redirect "/"
@@ -34,7 +34,7 @@ get "/sign-up" do
 	erb :sign_up
 end
 
-post '/sign-up' do
+post "/sign-up" do
   User.create(
   	username: params[:username],
   	password: params[:password],
