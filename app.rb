@@ -38,8 +38,8 @@ post "/sign-up" do
   User.create(
   	username: params[:username],
   	password: params[:password],
-  	bday: params[:bday],
-  	name: params[:name]
+  	name: params[:name],
+  	age: params[:age]
   	)
   flash[:notice] = "You have signed up."
   redirect "/"  #/post to page with posts
