@@ -12,10 +12,10 @@ get "/" do
 	erb :index
 end
 
-get "/account" do       #@user = User.find(2)
-						#@user.name
-  @user = User.find(session[:user_id]) 
-  erb :account
+get "/account" do       
+	@user = User.find(session[:user_id]) 
+	@posting = current_user.posts.all
+	erb :account
 end
 
 get "/edit" do
@@ -75,20 +75,23 @@ get "/post" do
 	erb :post
 end
 
-# post "/post" do
-# 	Post.create(
-# 	post: params[:post],
-# 	user_id: current_user.id
-# 	)
-#   # user = User.get(session[:user_id])
-#   # Post.create(:text)
+post "/post" do
+	Post.create(
+	posts: params[:post],
+	user_id: current_user
+	)
+	flash[:notice] = "You have posted."
+	redirect "/account"
+end
+  # user = User.get(session[:user_id])
+  # Post.create(:text)
 
 #   # @post = Post.new(params) #find(session[:user_id]).create(
 #   flash[:notice] = "You have posted."
 #   redirect "/post"  #/post to page with posts
 # end
 
-#deletes the account that you're on
+#deletes the account that you're on  user where id 15.Post
 get "/delete" do
 	User.destroy(session[:user_id])
 	session[:user_id] = nil
