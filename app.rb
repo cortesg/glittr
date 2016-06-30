@@ -1,5 +1,5 @@
 #controller file
- 
+
 require "sinatra"
 require "sinatra/activerecord"
 require "sinatra/flash"
@@ -12,9 +12,11 @@ get "/" do
 	erb :index
 end
 
-get "/account" do
-  @users = User.all
-
+get "/account" do       #@user = User.find(2)
+						#@user.name
+  @users = User.all     #@user = User.where(name: "Gino Cortes")
+  						#@user.name
+  @users.first.name
   erb :account
 end
 
@@ -76,6 +78,21 @@ get "/sign-out" do
 	redirect "/"
 end
 
+get "/follow/:id" do
+	params.inspect#[:id]
+	# follow.create(
+	# 	follower_id: current_user_id,
+	# 	followee_id: params[:id]
+	# )
+end
+
+get "/profile/:id" do
+	@profile = Profile.find(params[:id])  #profile.age profile.name
+end
+
+# get "profile/:id" do
+# 	@profile = Profile.find(params[:id])  #profile.age profile.name
+# end
 
 # get "/sign-out" do 
 # 	flash[:notice] = "You have signed out."
