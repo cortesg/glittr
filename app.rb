@@ -9,7 +9,7 @@ enable :sessions
 set :database, "sqlite3:database.sqlite3"
 
 get "/" do
-	@posting = Post.all.last(10) 
+	@posting = Post.all.last(10) #shows last 10 posts
 	erb :index
 end
 
