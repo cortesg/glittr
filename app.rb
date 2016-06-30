@@ -28,7 +28,7 @@ post "/sign-in" do #post hides what would display in URL
 	@user = User.where(username: params[:username]).first  #.first to get rid of array
 	if @user && @user.password == params[:password]
 		session[:user_id] = @user.id
-		flash[:notice] = "You've been signed in successfully."
+		flash[:notice] = "You've been signed in successfully. Welcome #{@user.name}!"
 		redirect "/"
 	else
 		flash[:error] = "FAILED SIGN IN."
@@ -69,6 +69,7 @@ post "/post" do
   redirect "/post"  #/post to page with posts
 end
 
+#deletes the account that you're on
 get "/delete" do
 	User.destroy(session[:user_id])
 	session[:user_id] = nil
