@@ -110,13 +110,16 @@ get "/follow/:id" do
 	# )
 end
 
-get "/profile/:id" do
-	@profile = Profile.find(params[:id])  #profile.age profile.name
-end
-
-# get "profile/:id" do
-# 	@profile = Profile.find(params[:id])  #profile.age profile.name
+# get "/profile" do
+# 	@user = User.where(username: params[:username])
+# 	erb :profile
+# 	# @profile = Profile.find(params[:id])  #profile.age profile.name
 # end
+
+get "/account/:id" do
+	@user = User.find(params[:id])
+	erb :account  #profile.age profile.name
+end
 
 # get "/sign-out" do 
 # 	flash[:notice] = "You have signed out."
@@ -131,6 +134,7 @@ post "/search" do
   @user = User.where(username: params[:username])
   flash[:notice] = "You are being redirected."
   #/post to page with posts
+  redirect "/profile"
 end
 
 def current_user     
