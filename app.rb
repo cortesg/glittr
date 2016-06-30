@@ -70,13 +70,19 @@ get "/delete" do
 	User.find().destroy
 end
 
+get "/sign-out" do
+	session[:user_id] = nil
+	redirect "/"
+end
+
+
 # get "/sign-out" do 
 # 	flash[:notice] = "You have signed out."
 # 	redirect "/"
 # end
 
-# def current_user     
-# 	if session[:user_id]       
-# 		@current_user = User.find(session[:user_id])     
-# 	end   
-# end
+def current_user     
+	if session[:user_id]       
+		@current_user = User.find(session[:user_id])     
+	end   
+end

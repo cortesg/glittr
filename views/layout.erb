@@ -6,6 +6,17 @@
 	<title>Glittr</title>
 </head>
 <body>
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<% if session[:user_id] %>
+				<li><a href="/sign-out">Sign out</a></li>
+			<% else %>
+				<li><a href="/sign-up">Sign up</a></li>
+				<li><a href="/sign-in">Sign in</a></li>
+			<% end %>
+		</ul>
+	</nav>
 	<div id="notice">
 		<%= flash[:notice] if flash[:notice] %>
 	</div>
