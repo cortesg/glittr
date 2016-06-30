@@ -18,6 +18,10 @@ get "/account" do       #@user = User.find(2)
   erb :account
 end
 
+get "/edit" do
+	erb :edit
+end
+
 get "/sign-in" do
 	erb :sign_in
 end
@@ -60,7 +64,7 @@ get "/post" do
 end
 
 post "/post" do
-  User.create(
+  Post.create(
   	post: params[:post]
   	)
   flash[:notice] = "You have posted."
