@@ -75,18 +75,18 @@ get "/post" do
 	erb :post
 end
 
-post "/post" do
-	Post.create(
-	post: params[:post],
-	user_id: current_user.id
-	)
-  # user = User.get(session[:user_id])
-  # Post.create(:text)
+# post "/post" do
+# 	Post.create(
+# 	post: params[:post],
+# 	user_id: current_user.id
+# 	)
+#   # user = User.get(session[:user_id])
+#   # Post.create(:text)
 
-  # @post = Post.new(params) #find(session[:user_id]).create(
-  flash[:notice] = "You have posted."
-  redirect "/post"  #/post to page with posts
-end
+#   # @post = Post.new(params) #find(session[:user_id]).create(
+#   flash[:notice] = "You have posted."
+#   redirect "/post"  #/post to page with posts
+# end
 
 #deletes the account that you're on
 get "/delete" do
@@ -122,6 +122,16 @@ end
 # 	flash[:notice] = "You have signed out."
 # 	redirect "/"
 # end
+
+get "/search" do
+	erb :search
+end
+
+post "/search" do
+  @user = User.where(username: params[:username])
+  flash[:notice] = "You are being redirected."
+  #/post to page with posts
+end
 
 def current_user     
 	if session[:user_id]       
