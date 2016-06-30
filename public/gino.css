@@ -4,3 +4,10 @@
 #error {
 	color: purple;
 }
+#unicorn {
+	margin-left: 30%;
+}
+body {
+    /*background-image: url("paradise.jpg");*/
+    background-color: lavender;
+}
