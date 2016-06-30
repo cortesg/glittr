@@ -19,7 +19,19 @@ get "/account" do       #@user = User.find(2)
 end
 
 get "/edit" do
+	@user = User.find(session[:user_id]) 
 	erb :edit
+end
+
+post "/edit" do #post hides what would display in URL
+	@user = User.find(session[:user_id]).update(
+  	username: params[:username],
+  	password: params[:password],
+  	name: params[:name],
+  	age: params[:age]
+  	)
+		flash[:notice] = "You have edited your account."
+		redirect "/"
 end
 
 get "/sign-in" do
