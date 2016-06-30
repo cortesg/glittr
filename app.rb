@@ -48,6 +48,18 @@ get "/login-failed" do
 	erb :login_failed
 	# "login failed"
 end
+#############################################
+get "/post" do
+	erb :post
+end
+
+post "/post" do
+  User.create(
+  	post: params[:post]
+  	)
+  flash[:notice] = "You have posted."
+  redirect "/post"  #/post to page with posts
+end
 
 # get "/sign-out" do 
 # 	flash[:notice] = "You have signed out."
