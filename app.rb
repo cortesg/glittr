@@ -1,5 +1,5 @@
 #controller file
- 
+
 require "sinatra"
 require "sinatra/activerecord"
 require "sinatra/flash"
@@ -12,6 +12,13 @@ get "/" do
 	erb :index
 end
 
+get "/account" do       #@user = User.find(2)
+						#@user.name
+  @users = User.all     #@user = User.where(name: "Gino Cortes")
+  						#@user.name        
+  @users.first.name
+  erb :account
+end
 
 get "/sign-in" do
 	erb :sign_in
@@ -48,14 +55,52 @@ get "/login-failed" do
 	erb :login_failed
 	# "login failed"
 end
+#############################################
+get "/post" do
+	erb :post
+end
+
+post "/post" do
+  User.create(
+  	post: params[:post]
+  	)
+  flash[:notice] = "You have posted."
+  redirect "/post"  #/post to page with posts
+end
+
+get "/delete" do
+	User.find().destroy
+end
+
+get "/sign-out" do
+	session[:user_id] = nil
+	flash[:notice] = "You have signed out."
+	redirect "/"
+end
+
+get "/follow/:id" do
+	params.inspect#[:id]
+	# follow.create(
+	# 	follower_id: current_user_id,
+	# 	followee_id: params[:id]
+	# )
+end
+
+get "/profile/:id" do
+	@profile = Profile.find(params[:id])  #profile.age profile.name
+end
+
+# get "profile/:id" do
+# 	@profile = Profile.find(params[:id])  #profile.age profile.name
+# end
 
 # get "/sign-out" do 
 # 	flash[:notice] = "You have signed out."
 # 	redirect "/"
 # end
 
-# def current_user     
-# 	if session[:user_id]       
-# 		@current_user = User.find(session[:user_id])     
-# 	end   
-# end
+def current_user     
+	if session[:user_id]       
+		@current_user = User.find(session[:user_id])     
+	end   
+end
