@@ -61,6 +61,10 @@ post "/post" do
   redirect "/post"  #/post to page with posts
 end
 
+get "/delete" do
+	User.find().destroy
+end
+
 # get "/sign-out" do 
 # 	flash[:notice] = "You have signed out."
 # 	redirect "/"
