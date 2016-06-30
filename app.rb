@@ -72,6 +72,7 @@ end
 
 get "/sign-out" do
 	session[:user_id] = nil
+	flash[:notice] = "You have signed out."
 	redirect "/"
 end
 
