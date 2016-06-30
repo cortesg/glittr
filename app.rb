@@ -76,9 +76,14 @@ get "/post" do
 end
 
 post "/post" do
-  @post = Post.find(session[:user_id]).create(
-  	post: params[:post]
-  	)
+	Post.create(
+	post: params[:post],
+	user_id: current_user.id
+	)
+  # user = User.get(session[:user_id])
+  # Post.create(:text)
+
+  # @post = Post.new(params) #find(session[:user_id]).create(
   flash[:notice] = "You have posted."
   redirect "/post"  #/post to page with posts
 end
