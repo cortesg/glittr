@@ -12,6 +12,11 @@ get "/" do
 	erb :index
 end
 
+get "/account" do
+  @users = User.all
+
+  erb :account
+end
 
 get "/sign-in" do
 	erb :sign_in
