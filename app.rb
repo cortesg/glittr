@@ -14,9 +14,10 @@ end
 
 get "/account" do       #@user = User.find(2)
 						#@user.name
-  @users = User.all     #@user = User.where(name: "Gino Cortes")
-  						#@user.name        
-  @users.first.name
+  @user = User.find(session[:user_id]) 
+  # @users = User.all    #@user = User.where(name: "Gino Cortes")
+  				  	#@user.name        
+  # @users.first.name
   erb :account
 end
 

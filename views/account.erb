@@ -1,6 +1,7 @@
-<% @users.each do |user| %>
-  <strong>Name: </strong><%= user.name %>
-  <strong>Username: </strong><%= user.username %>
-  <strong>Age: </strong><%= user.age %>
-<% end %>
+
+  <strong>Name: </strong><%= @user.name %>
+  <strong>Username: </strong><%= @user.username %>
+  <strong>Age: </strong><%= @user.age %>
+
 	<a href="/delete">Delete Account</a>
+
