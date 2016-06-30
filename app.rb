@@ -76,7 +76,7 @@ get "/post" do
 end
 
 post "/post" do
-  Post.create(
+  @post = Post.find(session[:user_id]).create(
   	post: params[:post]
   	)
   flash[:notice] = "You have posted."
