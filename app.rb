@@ -75,13 +75,18 @@ get "/post" do
 	erb :post
 end
 
-post "/post" do
-  Post.create(
-  	post: params[:post]
-  	)
-  flash[:notice] = "You have posted."
-  redirect "/post"  #/post to page with posts
-end
+# post "/post" do
+# 	Post.create(
+# 	post: params[:post],
+# 	user_id: current_user.id
+# 	)
+#   # user = User.get(session[:user_id])
+#   # Post.create(:text)
+
+#   # @post = Post.new(params) #find(session[:user_id]).create(
+#   flash[:notice] = "You have posted."
+#   redirect "/post"  #/post to page with posts
+# end
 
 #deletes the account that you're on
 get "/delete" do
@@ -105,18 +110,32 @@ get "/follow/:id" do
 	# )
 end
 
-get "/profile/:id" do
-	@profile = Profile.find(params[:id])  #profile.age profile.name
-end
-
-# get "profile/:id" do
-# 	@profile = Profile.find(params[:id])  #profile.age profile.name
+# get "/profile" do
+# 	@user = User.where(username: params[:username])
+# 	erb :profile
+# 	# @profile = Profile.find(params[:id])  #profile.age profile.name
 # end
+
+get "/account/:id" do
+	@user = User.find(params[:id])
+	erb :account  #profile.age profile.name
+end
 
 # get "/sign-out" do 
 # 	flash[:notice] = "You have signed out."
 # 	redirect "/"
 # end
+
+get "/search" do
+	erb :search
+end
+
+post "/search" do
+  @user = User.where(username: params[:username])
+  flash[:notice] = "You are being redirected."
+  #/post to page with posts
+  redirect "/profile"
+end
 
 def current_user     
 	if session[:user_id]       
