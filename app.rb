@@ -135,10 +135,10 @@ get "/search" do
 end
 
 post "/search" do
-  @user = User.where(username: params[:username])
-  flash[:notice] = "You are being redirected."
-  #/post to page with posts
-  redirect "/profile"
+	@user = User.where(username: params[:username])
+	flash[:notice] = "You are being redirected."
+	  #/post to page with posts
+	redirect "/profile"
 end
 
 def current_user     
