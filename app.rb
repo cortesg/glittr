@@ -28,7 +28,7 @@ post "/sign-in" do #post hides what would display in URL
 	@user = User.where(username: params[:username]).first  #.first to get rid of array
 	if @user && @user.password == params[:password]
 		session[:user_id] = @user.id
-		flash[:notice] = "You've been signed in successfully."
+		flash[:notice] = "You've been signed in successfully. Welcome #{@user.name}!"
 		redirect "/"
 	else
 		flash[:error] = "FAILED SIGN IN."
@@ -40,6 +40,7 @@ get "/sign-up" do
 	erb :sign_up
 end
 
+#future: make so that signing up keeps you signed in
 post "/sign-up" do
   User.create(
   	username: params[:username],
@@ -68,8 +69,12 @@ post "/post" do
   redirect "/post"  #/post to page with posts
 end
 
+#deletes the account that you're on
 get "/delete" do
-	User.find().destroy
+	User.destroy(session[:user_id])
+	session[:user_id] = nil
+	flash[:notice] = "Your account is deleted."
+	redirect "/"
 end
 
 get "/sign-out" do
