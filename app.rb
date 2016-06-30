@@ -40,6 +40,7 @@ get "/sign-up" do
 	erb :sign_up
 end
 
+#future: make so that signing up keeps you signed in
 post "/sign-up" do
   User.create(
   	username: params[:username],
@@ -69,7 +70,10 @@ post "/post" do
 end
 
 get "/delete" do
-	User.find().destroy
+	User.destroy(session[:user_id])
+	session[:user_id] = nil
+	flash[:notice] = "Your account is deleted."
+	redirect "/"
 end
 
 get "/sign-out" do
