@@ -24,8 +24,12 @@ get "/edit" do
 end
 
 post "/edit" do #post hides what would display in URL
-	@user = User.where(username: params[:username]).first  #.first to get rid of array
-		session[:user_id] = @user.id
+	@user = User.find(session[:user_id]).update(
+  	username: params[:username],
+  	password: params[:password],
+  	name: params[:name],
+  	age: params[:age]
+  	)
 		flash[:notice] = "You have edited your account."
 		redirect "/"
 end
