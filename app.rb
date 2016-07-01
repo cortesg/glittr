@@ -15,7 +15,7 @@ end
 
 get "/account" do       
 	@user = User.find(session[:user_id]) 
-	@posting = current_user.posts.all
+	@posting = @user.posts.all   #FAILED METHODS ---> #Post.find(session[:user_id])    #Post.all.current_user_id
 	erb :account
 end
 
@@ -79,7 +79,7 @@ end
 post "/post" do
 	Post.create(
 	posts: params[:post],
-	user_id: current_user
+	user_id: session[:user_id] 
 	)
 	flash[:notice] = "You have posted."
 	redirect "/account"
