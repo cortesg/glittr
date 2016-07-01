@@ -1,7 +1,9 @@
-
-  <strong>Name: </strong><%= @user.name %>
-  <strong>Username: </strong><%= @user.username %>
-  <strong>Age: </strong><%= @user.age %>
+<strong>Name: </strong><%= @user.name %>
+<strong>Username: </strong><%= @user.username %>
+<strong>Age: </strong><%= @user.age %>
 	<a href="/edit">Edit Account</a>
 	<a href="/delete">Delete Account</a>
 
+<% @posting.each do |p| %>
+    <%= p.posts %>
+<% end %>

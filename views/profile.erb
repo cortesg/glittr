@@ -1,3 +1,7 @@
 <strong>Name: </strong><%= @user.name %>
 <strong>Username: </strong><%= @user.username %>
 <strong>Age: </strong><%= @user.age %>
+
+<% @posting.each do |p| %>
+    <%= p.posts %>
+<% end %>
