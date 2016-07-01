@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Poiret One', cursive;
-
 }
 
 html{
@@ -46,12 +45,20 @@ nav a {
 	border: 1px solid transparent;
 	font-size: x-large;
 	padding: 10px;
+	color: purple;
+	text-shadow: 1px 1px pink;
+
 }
 
 nav a:hover {
 	color: pink;
 	padding: 10px;
 	border: 1px solid pink;
+	text-shadow: 1px 1px purple;
+}
+
+nav a: visited{
+	text-decoration: none;
 }
 
 
@@ -59,5 +66,57 @@ nav {
 	margin-top: 30px;
 	text-align: center;
 }
+
+#notice {
+	color: pink;
+}
+#error {
+	color: purple;
+}
+#unicorn {
+	top: 20%;
+	left: 30%;
+	z-index: -99;
+	opacity: 0.3;
+	position: absolute;
+}
+
+.container{
+	height: 100%;
+	width: 100%;
+	margin: 20px auto;
+}
+
+/*================ Start Index ====================*/
+
+.postField{
+	width: 50%;
+	height: 500px;
+	margin: 30px;
+	position: relative;
+	left: 40%;
+	border: 5px solid purple;
+	display: inline-block;
+}
+
+#content{
+	border: 1px solid red;
+	display: inline-block;
+}
+/*================ End Index ====================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

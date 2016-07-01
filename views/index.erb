@@ -1,10 +1,19 @@
-<h1>Index</h1>
 
-<% @posting.each do |p| %>
-    <%= p.posts %>
-<% end %>
+<div class="container">
 
 <p>To see another user's details, please input "/profile/(id#)" in search bar</p>
 
+<div class="postField">
+<% @posting.each do |p| %>
+    <%= p.posts %>
+<% end %>
+</div>
+
+
+
 <div id="s"></div>
 <div id="splode"></div>
+
+</div>
+
+
