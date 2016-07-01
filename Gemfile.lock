@@ -44,7 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
+  activerecord (= 4.2.6)
   rake
   shotgun
   sinatra
