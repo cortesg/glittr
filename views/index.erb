@@ -16,6 +16,15 @@
         <source src="video/big_buck_bunny.mp4" type="video/mp4">
         <source src="video/big_buck_bunny.ogv" type="video/ogg">
     </video>
+
+<p>To see another user's details, please input "/profile/(id#)" in search bar</p>
+
+<div class="postField">
+<% @posting.each do |p| %>
+    <%= p.posts %>
+<% end %>
+</div>
+
 </div>
 
 
