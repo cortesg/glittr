@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Poiret One', cursive;
-
 }
 
 html{
@@ -46,12 +45,20 @@ nav a {
 	border: 1px solid transparent;
 	font-size: x-large;
 	padding: 10px;
+	color: purple;
+	text-shadow: 1px 1px pink;
+
 }
 
 nav a:hover {
 	color: pink;
 	padding: 10px;
 	border: 1px solid pink;
+	text-shadow: 1px 1px purple;
+}
+
+nav a: visited{
+	text-decoration: none;
 }
 
 
@@ -59,5 +66,112 @@ nav {
 	margin-top: 30px;
 	text-align: center;
 }
+
+#notice {
+	color: pink;
+}
+#error {
+	color: purple;
+}
+/*#unicorn {
+	top: 20%;
+	left: 30%;
+	z-index: -99;
+	opacity: 0.3;
+	position: absolute;
+}*/
+
+.container{
+	height: 100%;
+	width: 100%;
+	margin: 20px auto;
+}
+
+/*================ Start Index ====================*/
+
+.postField{
+	width: 50%;
+	height: 500px;
+	margin: 30px;
+	position: relative;
+	left: 40%;
+	border: 5px solid purple;
+	display: inline-block;
+}
+
+
+/*================ End Index ====================*/
+
+
+/*================ Start Post Page====================*/
+#content{
+	width: 400px;
+	height: 50px;
+	position: relative;
+	left: 50%;
+	margin-top: 50px;
+	border: 1px solid red;
+	display: inline-block;
+	padding-left: 20px;
+}
+
+/*================DAN'S CSS LAYOUT & INDEX =====================*/
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+/*=================end of dan's css layout & index ====================*/
+
+/*================ End Post Page====================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
