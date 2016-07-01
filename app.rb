@@ -120,9 +120,10 @@ end
 # 	# @profile = Profile.find(params[:id])  #profile.age profile.name
 # end
 
-get "/account/:id" do
+get "/profile/:id" do
 	@user = User.find(params[:id])
-	erb :account  #profile.age profile.name
+	@posting = @user.posts.all
+	erb :profile  #profile.age profile.name
 end
 
 # get "/sign-out" do 
@@ -135,10 +136,11 @@ get "/search" do
 end
 
 post "/search" do
-	@user = User.where(username: params[:username])
+	@user = User.where(username: params[:username]) #@user = User.find(params[:id]) #@user = User.where(username: params[:username])
+	#@posting = @user.posts.all
 	flash[:notice] = "You are being redirected."
 	  #/post to page with posts
-	redirect "/profile"
+	erb :profile #redirect "/profile"
 end
 
 def current_user     
