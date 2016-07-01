@@ -136,7 +136,8 @@ get "/search" do
 end
 
 post "/search" do
-	@user = User.where(username: params[:username]) #@user = User.find(params[:id]) #@user = User.where(username: params[:username])
+	@user = User.where(username: params[:post]).first #name has to be relevant to post #@user = User.find(params[:id]) #@user = User.where(username: params[:username])
+	@posting = @user.posts.all
 	#@posting = @user.posts.all
 	flash[:notice] = "You are being redirected."
 	  #/post to page with posts
