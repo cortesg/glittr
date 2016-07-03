@@ -17,30 +17,30 @@ function ponySpin(){
 
 
 // glitter function
-$(function() {
+$(document).ready(function() {
 
   
   // default is varying levels of transparent white sparkles
-  $(".sparkley:first").sparkleh();
+  $(".sparkley").sparkleh();
   
   // rainbow as a color generates random rainbow colros
   // count determines number of sparkles
   // overlap allows sparkles to migrate... watch out for other dom elements though.
-  $(".sparkley:last").sparkleh({
+  $(".sparkley").sparkleh({
     color: "rainbow",
     count: 100,
     overlap: 10
   });
   
   // here we create fuscia sparkles
-  $("h1").sparkleh({
+  $(".sparkley").sparkleh({
     count: 80,
     color: ["#ff0080","#ff0080","#0000FF"]
   });
   
   
   
-  $("p").sparkleh({
+  $(".title").sparkleh({
     count: 20,
     color: "#00ff00",
     speed: 0.05
