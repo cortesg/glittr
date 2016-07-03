@@ -17,7 +17,7 @@ nav a {
 	margin: 15px;
 	text-decoration: none;
 	font-weight: bolder;
-	border: 2px solid transparent;
+	/*border: 2px solid transparent;*/
 	font-size: x-large;
 	padding: 10px;
 	color: pink;
@@ -28,7 +28,7 @@ nav a {
 nav a:hover {
 	color: pink;
 	padding: 10px;
-	border: 2px solid pink;
+	/*border: 2px solid pink;*/
 	text-shadow: 1px 1px purple;
 }
 
@@ -91,21 +91,22 @@ nav {
 
 .infoText{
 	font-size: 20px;
-	color: purple;
-	text-shadow: 1px 1px purple;
+	color: pink;
 }
 
 .linkText{
 	text-decoration: none;
-	color: pink;
-	text-shadow: 1px 1px purple;
+	color: white;
 	font-size: 12px;
 }
-
+.linkText strong{
+	color: pink;
+	font-size: 15px;
+	text-shadow: 1px 1px white;
+}
 .linkText:hover{
 	text-decoration: none;
 	color: pink;
-	text-shadow: 1px 1px pink;
 }
 
 #infoBox{
@@ -113,7 +114,7 @@ nav {
 	margin-top: 20px;
 	margin-left: 50px;
 	padding: 10px;
-	border: 1px solid purple;
+	border: 5px solid white;
 	text-align: center;
 }
 
@@ -122,9 +123,13 @@ nav {
 	height: 75px;
 	margin-top: 20px;
 	margin-left: 50px;
-	border: 1px solid purple;
 	display: inline-block;
 	padding-left: 20px;
+	opacity: 0.70;
+	font-size: 20px;
+	text-align: center;
+	color: purple;
+	border: 3px solid pink;
 }
 
 .submitButton{
@@ -141,15 +146,17 @@ nav {
 
 .accountPostField{
 	width: 50%;
-	height: 380px;
+	height: 550px;
 	margin-top: 20px;
 	float: right;
 	margin-right: 50px;
-	border: 1px solid purple;
+	border: 5px solid white;
 	display: inline-block;
 	padding: 20px;
 	position: relative;
-	top: -218px;
+	top: -255px;
+	color: pink;
+	text-align: center;
 }
 
 /*================DAN'S CSS LAYOUT & INDEX =====================*/
