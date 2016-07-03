@@ -1,7 +1,12 @@
+<div class="title">
+  <h1>
+    Glittr
+  </h1>
+</div>
 
 <div class="container">
-	<p>To see another user's details, please input "/profile/(id#)" in search bar</p>
 	<div class="postField">
+    <p>To see another user's details, please input "/profile/(id#)" in search bar</p>
 		<% @posting.each do |p| %>
     	<%= p.posts %>
 		<% end %>
@@ -10,21 +15,20 @@
 <div id="splode"></div>
  -->
 </div>
+
+<!-- background video -->
 <div class="fullscreen-bg">
-    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
-        <source src="video/big_buck_bunny.webm" type="video/webm">
-        <source src="video/big_buck_bunny.mp4" type="video/mp4">
-        <source src="video/big_buck_bunny.ogv" type="video/ogg">
-    </video>
+  <video loop muted autoplay poster="../images/clouds.jpg" class="fullscreen-bg__video">
+    <source src="../videos/clouds.mp4" type="video/mp4">
+  </video>
+</div>
 
-<p>To see another user's details, please input "/profile/(id#)" in search bar</p>
+<!-- <p>To see another user's details, please input "/profile/(id#)" in search bar</p> -->
 
-<div class="postField">
+<!-- <div class="postField">
 <% @posting.each do |p| %>
     <%= p.posts %>
 <% end %>
-</div>
-
-</div>
+</div> -->
 
 
