@@ -4,10 +4,6 @@
 	font-family: 'Poiret One', cursive;
 }
 
-/*html{
-	background-color: #E3FFF6;
-}*/
-
 h1{
 	text-align: center;
 	width: 100px;
@@ -21,18 +17,18 @@ nav a {
 	margin: 15px;
 	text-decoration: none;
 	font-weight: bolder;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	font-size: x-large;
 	padding: 10px;
-	color: purple;
-	text-shadow: 1px 1px pink;
+	color: pink;
+	text-shadow: 1px 1px purple;
 
 }
 
 nav a:hover {
 	color: pink;
 	padding: 10px;
-	border: 1px solid pink;
+	border: 2px solid pink;
 	text-shadow: 1px 1px purple;
 }
 
@@ -59,8 +55,6 @@ nav {
 	position: absolute;
 	top: 10%;
 	left: 4%;
-/*	margin: 20px auto;*/
-	/*border: 1px solid red;*/
 	display: inline-block;
 }
 
@@ -71,12 +65,8 @@ nav {
 	height: 50%;
 	margin: 0 auto;
 	padding: 1%;
-	/*margin: 30px;
-	position: relative;
-	left: 40%;*/
 	border: 5px solid rgb(255,255,255);
 	mix-blend-mode: difference;
-	/*display: inline-block;*/
 
 }
 
@@ -208,11 +198,15 @@ nav {
 }*/
 
 .title h1 {
-	font-size: 80px;
+	font-size: 100px;
 	color: rgb(255,255,255);
 	mix-blend-mode: difference;
 	width: 300px;
-	margin: 3% auto;
+	margin: 5% auto;
+	z-index: 5;
+	position: relative; 
+	top: 35px;
+
 }
 
 $buttonBackground: #2c3e50;
@@ -270,9 +264,28 @@ h1 {
   font-size: 1.9em; 
   width: 900px; 
   margin: 0 auto 1em; 
-  text-shadow: 0 2px 1px purple;
+  text-shadow: 2px 1px purple;
 }
 
+.title h2{
+	font-size: 40px;
+	color: purple;
+	mix-blend-mode: difference;
+	width: 800px;
+	margin: 2% auto;
+	text-align: center;
+	text-shadow: 1px 1px purple;
+	line-height: 45px;
+	z-index: 2;
+	position: relative;
+	top: -95px;
+
+}
+
+.title em{
+	margin-left: 120px;
+	margin-right: 120px;
+}
 
 /*p {
 
@@ -301,6 +314,14 @@ h1 {
     animation-duration: 2000ms;
     animation-iteration-count: 2000ms;
     animation-timing-function: linear;
+}
+
+#indexUnicorn{
+	top: 10%;
+	left: 30%;
+	z-index: -99;
+	opacity: 0.75;
+	position: absolute;
 }
 
 @keyframes spin {
