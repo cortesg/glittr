@@ -375,6 +375,22 @@ h1 {
 
 
 
+/*================ SIGN IN Page====================*/
+
+#signInDiv{
+	width: 50%;
+	height: 40%;
+	margin: 75px auto;
+	border: 5px solid white;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.signIn{
+	width: 30%;
+	text-align: center;
+	margin-bottom: 10px;
+}
 
 
 
