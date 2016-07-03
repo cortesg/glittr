@@ -44,7 +44,7 @@ post "/sign-in" do #post hides what would display in URL
 	if @user && @user.password == params[:password]
 		session[:user_id] = @user.id
 		flash[:notice] = "You've been signed in successfully. Welcome #{@user.name} to the world of Glittr! ;)"
-		redirect "/"
+		redirect "/account"
 	else
 		flash[:error] = "You need a valid sign-in to be Glittr'ed :("
 		redirect "/login-failed"
@@ -64,7 +64,7 @@ post "/sign-up" do
   	age: params[:age]
   	)
   flash[:notice] = "You have signed up."
-  redirect "/"  #/post to page with posts
+  redirect "/sign-in"  #/post to page with posts
 end
 
 get "/login-failed" do 
@@ -97,13 +97,13 @@ get "/delete" do
 	User.destroy(session[:user_id])
 	session[:user_id] = nil
 	flash[:notice] = "Your account is deleted."
-	redirect "/"
+	redirect "/sign-up"
 end
 
 get "/sign-out" do
 	session[:user_id] = nil
 	flash[:notice] = "You have signed out. Come back soon for more Glittr ;)"
-	redirect "/"
+	redirect "/sign-in"
 end
 
 get "/follow/:id" do
