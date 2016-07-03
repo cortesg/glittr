@@ -10,19 +10,19 @@
 	<title>Glittr</title>
 </head>
 <body>
-	<nav class="sparkley">
+	<nav>
 		<ul>
 			<li><a href="/">Home</a></li>
 			<% if session[:user_id] %>
-				<li><a href="/post">Post</a></li>
-				<li><a href="/account">Account</a></li>
-				<li><a href="/follow/1">Follow</a></li>
-				<li><a href="/profile/1">Profile</a></li>
-				<li><a href="/search">Search user</a></li>
-				<li><a href="/sign-out">Sign out</a></li>
+				<li><a class="sparkley" href="/post">Post</a></li>
+				<li><a class="sparkley" href="/account">Account</a></li>
+				<li><a class="sparkley" href="/follow/1">Follow</a></li>
+				<li><a class="sparkley" href="/profile/1">Profile</a></li>
+				<li><a class="sparkley" href="/search">Search user</a></li>
+				<li><a class="sparkley" href="/sign-out">Sign out</a></li>
 			<% else %>
-				<li><a href="/sign-up">Sign up</a></li>
-				<li><a href="/sign-in">Sign in</a></li>
+				<li><a class="sparkley" href="/sign-up">Sign up</a></li>
+				<li><a class="sparkley" href="/sign-in">Sign in</a></li>
 			<% end %>
 		</ul>
 	</nav>

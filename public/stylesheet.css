@@ -226,15 +226,15 @@ $buttonColor: rgba(255,255,255,1);
   
   box-shadow: 0 38px 32px -23px black;
   margin: 0 1em 1em;
+}
   
-  &:hover {
+  .sparkley:hover {
    
     background: $buttonBackground;
     color: transparentize( $buttonColor,0.8 );
     
   }
   
-}
 
 html  {
   
@@ -322,7 +322,7 @@ h1 {
 	opacity: 0.3;
 	position: absolute;
     animation-name: spin;
-    animation-duration: 2000ms;
+    animation-duration: 1000ms;
     animation-iteration-count: 2000ms;
     animation-timing-function: linear;
 }
@@ -346,10 +346,32 @@ h1 {
 
 
 
+/*================ SIGN UP Page====================*/
+#formDiv{
+	width: 50%;
+	height: 50%;
+	margin: 75px auto;
+	border: 5px solid white;
+	text-align: center;
+	padding-top: 30px;
+}
 
+.signUp{
+	width: 50%;
+	text-align: center;
+	margin-bottom: 10px;
+}
 
+#formUnicorn{
+	margin-top: 20px;
+}
 
-
+#formUnicorn:hover{
+	animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: 2000ms;
+    animation-timing-function: linear;
+}
 
 
 

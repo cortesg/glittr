@@ -13,6 +13,7 @@ document.getElementById('submit').onclick = function validate() {
 function ponySpin(){
 	var img = getElementById("unicorn")
 	img.setAttribute("class", "unicorn")
+}
 
 
 // glitter function
