@@ -13,27 +13,6 @@ h1{
 	width: 100px;
 }
 
-#splode{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 0;
-}
-
-#s{
-	display: block;
-	position: absolute;
-	z-index: 1
-	mix-blend-mode: difference;
-	width: 60vw;
-	height: 60vh;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 100%;
-}
-
 nav li {
 	display: inline-block;
 }
@@ -73,18 +52,16 @@ nav {
 #error {
 	color: purple;
 }
-/*#unicorn {
-	top: 20%;
-	left: 30%;
-	z-index: -99;
-	opacity: 0.3;
-	position: absolute;
-}*/
 
 .container{
-	height: 100%;
-	width: 100%;
-	margin: 20px auto;
+	height: 500px;
+	width: 90%;
+	position: absolute;
+	top: 10%;
+	left: 4%;
+/*	margin: 20px auto;*/
+	/*border: 1px solid red;*/
+	display: inline-block;
 }
 
 /*================ Start Index ====================*/
@@ -110,9 +87,75 @@ nav {
 	position: relative;
 	left: 50%;
 	margin-top: 50px;
-	border: 1px solid red;
+	border: 1px solid purple;
 	display: inline-block;
 	padding-left: 20px;
+}
+
+
+/*================ ACCOUNT Page====================*/
+
+.infoText{
+	font-size: 20px;
+	color: purple;
+	text-shadow: 1px 1px purple;
+}
+
+.linkText{
+	text-decoration: none;
+	color: pink;
+	text-shadow: 1px 1px purple;
+	font-size: 12px;
+}
+
+.linkText:hover{
+	text-decoration: none;
+	color: pink;
+	text-shadow: 1px 1px pink;
+}
+
+#infoBox{
+	width: 15%;
+	margin-top: 20px;
+	margin-left: 50px;
+	padding: 10px;
+	border: 1px solid purple;
+	text-align: center;
+}
+
+#accountContent{
+	width: 300px;
+	height: 75px;
+	margin-top: 20px;
+	margin-left: 50px;
+	border: 1px solid purple;
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.submitButton{
+	width: 50px;
+	background-color: purple;
+	color: pink;
+	text-shadow: 1px pink;
+}
+.submitButton:hover{
+	width: 50px;
+	background-color: pink;
+	color: purple;
+}
+
+.accountPostField{
+	width: 50%;
+	height: 380px;
+	margin-top: 20px;
+	float: right;
+	margin-right: 50px;
+	border: 1px solid purple;
+	display: inline-block;
+	padding: 20px;
+	position: relative;
+	top: -218px;
 }
 
 /*================DAN'S CSS LAYOUT & INDEX =====================*/
@@ -162,6 +205,28 @@ nav {
 /*================ End Post Page====================*/
 
 
+
+
+#unicorn{
+	top: 20%;
+	left: 30%;
+	z-index: -99;
+	opacity: 0.3;
+	position: absolute;
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: 2000ms;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
 
 
 

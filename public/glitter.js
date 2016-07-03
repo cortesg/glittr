@@ -7,3 +7,14 @@ document.getElementById('submit').onclick = function validate() {
 	}	
 }
 
+// ============= PONY SPIN ON POST SUBMIT=============
+
+function ponySpin(){
+	var img = getElementById("unicorn")
+	img.setAttribute("class", "unicorn")
+}
+
+
+
+
+

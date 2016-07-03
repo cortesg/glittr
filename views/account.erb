@@ -1,9 +1,26 @@
-<strong>Name: </strong><%= @user.name %>
-<strong>Username: </strong><%= @user.username %>
-<strong>Age: </strong><%= @user.age %>
-	<a href="/edit">Edit Account</a>
-	<a href="/delete">Delete Account</a>
+<div class="container">
+	<div id="infoBox">
+		
+		<!-- <strong>Username: </strong><%= @user.username %><br> -->
+		<strong class="infoText"><%= @user.name %></strong><br>
+		<strong class="infoText"><%= @user.username %><br></strong>
+		<strong class="infoText">Age: </strong><strong class="infoText"><%= @user.age %></strong><br>
+			<a class="linkText" href="/edit">Edit Account</a><br>
+			<a class="linkText" href="/delete">Delete Account</a>
+	</div>
 
-<% @posting.each do |p| %>
-    <%= p.posts %>
-<% end %>
+	<div id="postBox">
+		<form id="post" method="post" action="/post">
+			<input id="accountContent" type="text" name="post" placeholder="How much you bench?">
+			<input id="submit" class="submitButton" type="submit" onclick="ponySpin()">
+		<!-- <input type="hidden" name="country" value="Norway"> -->
+	 	<!-- cannot be button -->
+		</form>
+	</div>
+
+	<div class="accountPostField">
+		<% @posting.each do |p| %>
+    	<%= p.posts %>
+		<% end %>
+	</div>
+</div>
