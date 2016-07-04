@@ -20,9 +20,9 @@
 	
 	<img id="indexUnicorn" src="http://67.media.tumblr.com/5ad3d554b65eb61f7a943ba1e68ec310/tumblr_inline_mywcvnmH1r1qellpe.gif" height="500px" width="500px" alt="">
 
-	<div class="postField">
+	<div class="indexPostField">
 		<% @posting.each do |p| %>
-    	<%= p.posts %>
+    		<div class="indexPosts"><%= p.posts %></div>
 		<% end %>
 	</div>
 
