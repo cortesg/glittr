@@ -187,8 +187,10 @@ nav {
 	text-align: center;
 }
 
-.accountPostField strong{
-	width: 700px;
+.accountPosts{
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 6px;
 	line-height: 20px;
 	border: 3px solid pink;
 	background-color: white;
@@ -196,8 +198,8 @@ nav {
 	color: purple;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 150px;
-	padding-right: 150px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /*.glittrPosts{
@@ -489,8 +491,10 @@ h1 {
 	text-align: center;
 }
 
-.profilePostField strong{
-	width: 700px;
+.profilePosts{
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 6px;
 	line-height: 20px;
 	border: 3px solid pink;
 	background-color: white;
@@ -498,11 +502,9 @@ h1 {
 	color: purple;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 150px;
-	padding-right: 150px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
-
-
 
 
 
