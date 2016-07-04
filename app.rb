@@ -15,7 +15,7 @@ end
 
 get "/account" do       
 	@user = User.find(session[:user_id]) 
-	@posting = @user.posts.all   #FAILED METHODS ---> #Post.find(session[:user_id])    #Post.all.current_user_id
+	@posting = @user.posts.all.last(10)   #FAILED METHODS ---> #Post.find(session[:user_id])    #Post.all.current_user_id
 	erb :account
 end
 
