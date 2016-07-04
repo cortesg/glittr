@@ -139,7 +139,7 @@ get "/search" do
 	erb :search
 end
 
-post "/search/" do
+post "/search" do
 	@user = User.where(username: params[:post]).first #@user = User.find(params[:id]) #@user = User.where(username: params[:username])
 	@posting = @user.posts.all.last(10).reverse!
 	#@posting = @user.posts.all
