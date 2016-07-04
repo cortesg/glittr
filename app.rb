@@ -9,13 +9,13 @@ enable :sessions
 set :database, "sqlite3:database.sqlite3"
 
 get "/" do
-	@posting = Post.all.last(10) #shows last 10 posts
+	@posting = Post.all.last(10).reverse! #shows last 10 posts
 	erb :index
 end
 
 get "/account" do       
 	@user = User.find(session[:user_id]) 
-	@posting = @user.posts.all.last(10)   #FAILED METHODS ---> #Post.find(session[:user_id])    #Post.all.current_user_id
+	@posting = @user.posts.all.last(10).reverse!   #FAILED METHODS ---> #Post.find(session[:user_id])    #Post.all.current_user_id
 	erb :account
 end
 
@@ -140,7 +140,7 @@ end
 
 post "/search" do
 	@user = User.where(username: params[:post]).first #@user = User.find(params[:id]) #@user = User.where(username: params[:username])
-	@posting = @user.posts.all.last(10)
+	@posting = @user.posts.all.last(10).reverse!
 	#@posting = @user.posts.all
 	# flash[:notice] = "You are being redirected."
 	  #/post to page with posts
