@@ -31,8 +31,8 @@ post "/edit" do #post hides what would display in URL
   	name: params[:name],
   	age: params[:age]
   	)
-		flash[:notice] = "You have edited your account. Welcome to Glittr!"
-		redirect "/"
+		flash[:notice] = "Consider your account edited."
+		redirect "/account"
 end
 
 get "/sign-in" do
