@@ -137,9 +137,9 @@ end
 
 post "/search" do
 	@user = User.where(username: params[:post]).first #@user = User.find(params[:id]) #@user = User.where(username: params[:username])
-	@posting = @user.posts.all
+	@posting = @user.posts.all.last(10)
 	#@posting = @user.posts.all
-	flash[:notice] = "You are being redirected."
+	# flash[:notice] = "You are being redirected."
 	  #/post to page with posts
 	erb :profile #redirect "/profile"
 end

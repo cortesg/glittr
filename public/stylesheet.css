@@ -455,7 +455,33 @@ h1 {
 	padding-top: 30px;
 }
 
+.profilePostField{
+	width: 50%;
+	height: 550px;
+	margin-top: 20px;
+	float: right;
+	margin-right: 50px;
+	border: 5px solid white;
+	display: inline-block;
+	padding: 20px;
+	position: relative;
+	top: -135px;
+	color: pink;
+	text-align: center;
+}
 
+.profilePostField strong{
+	width: 700px;
+	line-height: 20px;
+	border: 3px solid pink;
+	background-color: white;
+	opacity: 0.7;
+	color: purple;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 150px;
+	padding-right: 150px;
+}
 
 
 

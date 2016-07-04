@@ -1,7 +1,16 @@
-<strong>Name: </strong><%= @user.name %>
-<strong>Username: </strong><%= @user.username %>
-<strong>Age: </strong><%= @user.age %>
+<div class="container">
+	<div id="infoBox">
+		<strong class="infoText"><%= @user.name %></strong><br>
+		<strong class="infoText"><%= @user.username %><br></strong>
+		<strong class="infoText">Age: </strong><strong class="infoText"><%= @user.age %></strong><br><br>
+	</div>
+	
+	
+	<div class="profilePostField">
+		<% @posting.each do |p| %>
+    		<strong><%= p.posts %></strong><br><br><br>
+		<% end %>
+	</div>
 
-<% @posting.each do |p| %>
-    <%= p.posts %>
-<% end %>
+	<img id="unicorn" src="http://67.media.tumblr.com/5ad3d554b65eb61f7a943ba1e68ec310/tumblr_inline_mywcvnmH1r1qellpe.gif" height="500px" width="500px" alt="">
+</div>
