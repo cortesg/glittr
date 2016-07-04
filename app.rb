@@ -77,6 +77,7 @@ get "/post" do
 end
 
 post "/post" do
+	user = User.find(session[:user_id])
 	Post.create(
 	posts: params[:post],
 	user_id: session[:user_id] 

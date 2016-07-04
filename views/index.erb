@@ -22,7 +22,7 @@
 
 	<div class="indexPostField">
 		<% @posting.each do |p| %>
-    		<div class="indexPosts"><%= p.posts %></div>
+    		<div class="indexPosts"><div class="user"><a href=""><%= p.user.username %></a> said:</div><%= p.posts %></div>
 		<% end %>
 	</div>
 

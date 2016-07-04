@@ -37,22 +37,6 @@ $(function plzWork() {
     color: ["#ff0080","#ff0080","#0000FF"]
   });
   
-  
-  
-  $("p").sparkleh({
-    count: 20,
-    color: "#00ff00",
-    speed: 0.05
-  });
-
-  $("#image").imagesLoaded( function() {
-    $(".img").sparkleh({
-      count: 25,
-      color: ["#00afec","#fb6f4a","#fdfec5"],
-    speed: 0.4
-    });
-  });
-
 
 });
 
@@ -316,6 +300,11 @@ $.fn.imagesLoaded = function(callback){
   return this;
 };
 
+$(document).ready(function() {
+    $(".sparkley").mouseover(function() {
+        plzWork();
+    });
+});
 
 
 
