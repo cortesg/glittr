@@ -110,7 +110,7 @@ nav {
 }
 
 #infoBox{
-	width: 15%;
+	width: 300px;
 	margin-top: 20px;
 	margin-left: 50px;
 	padding: 10px;
@@ -418,6 +418,22 @@ h1 {
 	margin-bottom: 10px;
 }
 
+/*================ EDIT Page====================*/
+
+.editForm{
+	width: 50%;
+	height: 50%;
+	margin: 75px auto;
+	border: 5px solid white;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.edit{
+	width: 30%;
+	text-align: center;
+	margin-bottom: 10px;
+}
 
 
 

@@ -31,7 +31,7 @@ post "/edit" do #post hides what would display in URL
   	name: params[:name],
   	age: params[:age]
   	)
-		flash[:notice] = "You have edited your account. Welcome to Glittr! ;)"
+		flash[:notice] = "You have edited your account. Welcome to Glittr!"
 		redirect "/"
 end
 
@@ -43,7 +43,7 @@ post "/sign-in" do #post hides what would display in URL
 	@user = User.where(username: params[:username]).first  #.first to get rid of array
 	if @user && @user.password == params[:password]
 		session[:user_id] = @user.id
-		flash[:notice] = "You've been signed in successfully. Welcome #{@user.name} to the world of Glittr! ;)"
+		flash[:notice] = "You've been signed in successfully. Welcome #{@user.name}, to the world of Glittr!"
 		redirect "/account"
 	else
 		flash[:error] = "You need a valid sign-in to be Glittr'ed :("
@@ -102,7 +102,7 @@ end
 
 get "/sign-out" do
 	session[:user_id] = nil
-	flash[:notice] = "You have signed out. Come back soon for more Glittr ;)"
+	flash[:notice] = "You have signed out. Come back soon for more Glittr"
 	redirect "/sign-in"
 end
 

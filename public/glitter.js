@@ -33,14 +33,14 @@ $(document).ready(function() {
   });
   
   // here we create fuscia sparkles
-  $(".sparkley").sparkleh({
+  $(".indexUnicorn").sparkleh({
     count: 80,
     color: ["#ff0080","#ff0080","#0000FF"]
   });
   
   
   
-  $(".title").sparkleh({
+  $(".indexUnicorn").sparkleh({
     count: 20,
     color: "#00ff00",
     speed: 0.05
