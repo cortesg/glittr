@@ -12,11 +12,11 @@
 <body>
 	<nav>
 		<ul>
-			<li><a class="sparkley" href="/">Home</a></li>
+			<li><a class="sparkley" href="/" onmouseover="$(this).plzWork(sparkleh());">Home</a></li>
 			<% if session[:user_id] %>
-				<li><a class="sparkley" href="/post">Post</a></li>
+				<!-- <li><a class="sparkley" href="/post">Post</a></li> -->
 				<li><a class="sparkley" href="/account">Profile</a></li>
-				<li><a class="sparkley" href="/follow/1">Follow</a></li>
+				<!-- <li><a class="sparkley" href="/follow/1">Follow</a></li> -->
 				<!-- <li><a class="sparkley" href="/profile/1">Profile</a></li> -->
 				<li><a class="sparkley" href="/search">Search user</a></li>
 				<li><a class="sparkley" href="/sign-out">Sign out</a></li>
@@ -37,7 +37,8 @@
 
 
 	<!-- <img id="unicorn" src="http://67.media.tumblr.com/5ad3d554b65eb61f7a943ba1e68ec310/tumblr_inline_mywcvnmH1r1qellpe.gif" height="500px" width="500px" alt=""> -->
-<script type="text/javascript" src="glitter.js"></script>
+
 </body>
+<script type="text/javascript" src="glitter.js"></script>
 </html>
 

@@ -1,11 +1,19 @@
 
 <div class="container">
 
-<form id="post" method="post" action="/post">
-	<input id="content" type="text" name="post" placeholder="Enter your text">
-	<input id="submit" type="submit">
-	<!-- <input type="hidden" name="country" value="Norway"> -->
-	 <!-- cannot be button -->
-</form>
+	<form id="post" method="post" action="/post">
+		<input id="content" type="text" name="post" placeholder="Enter your text">
+		<input id="submit" type="submit">
+		<!-- <input type="hidden" name="country" value="Norway"> -->
+		 <!-- cannot be button -->
+	</form>
+
+	<div class="accountPostField">
+		<% @posting.each do |p| %>
+    		<strong><%= p.posts %></strong><br><br><br>
+		<% end %>
+	</div>
+
+	<img id="unicorn" src="http://67.media.tumblr.com/5ad3d554b65eb61f7a943ba1e68ec310/tumblr_inline_mywcvnmH1r1qellpe.gif" height="500px" width="500px" alt="">
 
 </div>
