@@ -6,16 +6,6 @@ function ponySpin(){
 	img.setAttribute("class", "unicorn")
 }
 
-// ============= BASIC FUNCTIONALITY =============
-
-// document.getElementById('submit').onclick = function validate() {
-// 	//checks character length of posts
-// 	var P = document.getElementById('accountContent').value
-// 	if (P.length >= 26 || P.length < 1) {
-// 		alert("Must be at least 1 character and fewer than 25 characters.");
-// 	    return false; //forces to stay on page if wrong
-// 	}	
-// }
 
 // ============= SPARKLY STUFF ON HOVER =============
 
@@ -313,5 +303,15 @@ $(document).ready(function() {
 });
 
 
+// ============= BASIC FUNCTIONALITY =============
+
+document.getElementById('submit').onclick = function validate() {
+	//checks character length of posts
+	var P = document.getElementById('accountContent').value
+	if (P.length >= 26 || P.length < 1) {
+		alert("Must be at least 1 character and fewer than 25 characters.");
+	    return false; //forces to stay on page if wrong
+	}	
+}
 
 
