@@ -72,7 +72,7 @@ nav {
 	padding: 1%;
 	/*background-color: rgba(255,255,255,0.5);*/
 	/*border: 5px solid rgb(255,255,255);*/
-	mix-blend-mode: difference;
+	/*mix-blend-mode: difference;*/
 	text-align: center;
 }
 
@@ -226,7 +226,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  mix-blend-mode: difference;
+  /*mix-blend-mode: difference;*/
   z-index: -100;
 }
 
@@ -257,7 +257,7 @@ nav {
 .title h1 {
 	font-size: 100px;
 	color: rgb(255,255,255);
-	mix-blend-mode: difference;
+	/*mix-blend-mode: difference;*/
 	width: 300px;
 	margin: 5% auto;
 	z-index: 5;
@@ -320,7 +320,7 @@ h1 {
 .title h2{
 	font-size: 40px;
 	color: purple;
-	mix-blend-mode: difference;
+	/*mix-blend-mode: difference;*/
 	width: 800px;
 	margin: 2% auto;
 	text-align: center;
