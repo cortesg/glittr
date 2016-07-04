@@ -130,6 +130,9 @@ end
 # 	flash[:notice] = "You have signed out."
 # 	redirect "/"
 # end
+get "/error" do
+	erb :error 
+end
 
 get "/search" do
 	erb :search
