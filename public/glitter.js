@@ -32,6 +32,12 @@ $(function plzWork() {
     overlap: 10
   });
   
+  $(".container").sparkleh({
+    color: "rainbow",
+    count: 100,
+    overlap: 10
+  });
+
   $("nav").sparkleh({
     count: 80,
     color: ["#ff0080","#ff0080","#0000FF"]

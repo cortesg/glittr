@@ -57,7 +57,8 @@ nav {
 	top: 10%;
 	left: 4%;
 	display: inline-block;
-	z-index: -100;
+	/*commented the z-index out so the sparkle works for container*/
+	/*z-index: -100;*/
 }
 
 /*================ Start Index ====================*/
