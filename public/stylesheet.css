@@ -66,15 +66,15 @@ nav {
 .indexPostField{
 	position: fixed;
 	top: 70px;
-	left: 0px;
+	left: 1px;
 	width: 300px;
-	height: 50%;
+	height: 70%;
 	padding: 1%;
 	/*background-color: rgba(255,255,255,0.5);*/
 	/*border: 5px solid rgb(255,255,255);*/
 	/*mix-blend-mode: difference;*/
 	text-align: center;
-	overflow-y: scroll;
+
 }
 
 .indexPosts{
@@ -91,6 +91,11 @@ nav {
 	display: inline-block;
 }
 
+.indexPostField h2{
+	color: purple;
+	margin-bottom: 4px;
+	text-shadow: 1px 1px purple;
+}
 
 
 /*================ End Index ====================*/
@@ -485,6 +490,7 @@ h1 {
 	top: -135px;
 	color: pink;
 	text-align: center;
+	overflow-y: scroll
 }
 
 .profilePosts{

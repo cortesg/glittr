@@ -124,7 +124,7 @@ end
 #searches a user's profile by their username
 post "/search" do
 	@user = User.where(username: params[:post]).first 
-	@posting = @user.posts.all.last(10).reverse!
+	@posting = @user.posts.all.reverse_order!
 	erb :profile 
 end
 
