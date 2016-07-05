@@ -186,6 +186,7 @@ nav {
 	top: -295px;
 	color: pink;
 	text-align: center;
+	overflow-y: scroll
 }
 
 .accountPosts{

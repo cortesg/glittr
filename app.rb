@@ -15,7 +15,7 @@ end
 
 get "/account" do       
 	@user = User.find(session[:user_id]) 
-	@posting = @user.posts.all.last(10).reverse!   
+	@posting = @user.posts.all.reverse_order!   
 	erb :account
 end
 
