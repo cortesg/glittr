@@ -523,21 +523,24 @@ h1 {
 
 
 .user a{
+	font-family: 'Secular One', sans-serif;
 	color:purple;
-	font-size: small;
+	font-size: x-small;
 	text-decoration: none;
 	margin: 0;
 }
 
 .user{
-	font-size: small;
+	font-family: 'Secular One', sans-serif;
+	font-size: x-small;
 	text-decoration: none;
 	margin: 0;
 }
 
 .user a:hover{
+	font-family: 'Secular One', sans-serif;
 	color: pink;
-	font-size: small;
+	font-size: x-small;
 	text-decoration: none;
 	margin: 0;
 }
