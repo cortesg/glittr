@@ -47,7 +47,7 @@ post "/sign-in" do #post hides what would display in URL
 		redirect "/account"
 	else
 		flash[:error] = "You need a valid sign-in to be Glittr'ed :("
-		redirect "/login-failed"
+		redirect "/sign-in"
 	end
 end
 
