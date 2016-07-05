@@ -411,7 +411,7 @@ h1 {
 /*================ SIGN UP Page====================*/
 #formDiv{
 	width: 50%;
-	height: 50%;
+	height: 55%;
 	margin: 75px auto;
 	border: 5px solid white;
 	text-align: center;
@@ -419,7 +419,9 @@ h1 {
 }
 
 .signUp{
+	font-family: 'Secular One', sans-serif;
 	width: 50%;
+	height: 25px;
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -449,7 +451,9 @@ h1 {
 }
 
 .signIn{
-	width: 30%;
+	font-family: 'Secular One', sans-serif;
+	width: 40%;
+	height: 30px;
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -458,7 +462,7 @@ h1 {
 
 .editForm{
 	width: 50%;
-	height: 50%;
+	height: 55%;
 	margin: 75px auto;
 	border: 5px solid white;
 	text-align: center;
@@ -466,7 +470,9 @@ h1 {
 }
 
 .edit{
-	width: 30%;
+	font-family: 'Secular One', sans-serif;
+	width: 40%;
+	height: 25px;
 	text-align: center;
 	margin-bottom: 10px;
 }
