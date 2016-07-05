@@ -2,6 +2,7 @@
 
 a social media site for those who, despite their "masculine" desires, want to get in touch with their inner unicorn
 
+
 Glittr currently has these features for all you unicorns to enjoy:
 
 *sign up
@@ -21,5 +22,6 @@ Glittr currently has these features for all you unicorns to enjoy:
 *visit other users' profile pages through the "Search User" function
 
 *see the home page with the 10 most recent posts (the "feed")
+
 
 Please enjoy yourselves as you journey through the fabulous world of Glittr :)
