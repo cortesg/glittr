@@ -74,6 +74,7 @@ nav {
 	/*border: 5px solid rgb(255,255,255);*/
 	/*mix-blend-mode: difference;*/
 	text-align: center;
+	overflow-y: scroll;
 }
 
 .indexPosts{
