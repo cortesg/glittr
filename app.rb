@@ -6,7 +6,8 @@ require "sinatra/flash"
 require "./models"
 
 enable :sessions
-set :database, "sqlite3:database.sqlite3"
+
+configure(:development){set :database, "sqlite3:database.sqlite3"}
 
 get "/" do
 	@posting = Post.all.last(10).reverse! #shows last 10 posts top-down
