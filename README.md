@@ -1,27 +1,29 @@
 # Glittr
+### Contributing Team 
+**[Gino Cortes](https://github.com/cortesg), [Dan Yu](https://github.com/nexix1), & [David Sabin](https://github.com/ddansab)**
 
-a social media site for those who, despite their "masculine" desires, want to get in touch with their inner unicorn
-
-
-Glittr currently has these features for all you bros to enjoy:
-
-*sign up
-
-*sign in
-
-*sign out
-
-*edit their account details
-
-*delete their account
-
-*post micro-blogs (under 25 characters)
-
-*see a profile page with all of their account details and micro-blog posts to date
-
-*visit other users' profile pages through the "Search User" function
-
-*see the home page with the 10 most recent posts (the "feed")
+[Glittr](https://glittr.herokuapp.com/) is social media platform for bros to broadcast how much they bench while tapping into their inner unicorns.
 
 
-Please enjoy yourselves as you journey through the fabulous world of Glittr :)
+Glittr currently supports the following features:
+* Sign up
+* Sign in
+* Sign out
+* Edit  account details
+* Delete their account
+* Post micro-blogs (under 25 characters)
+* See a profile page with all of their account details and micro-blog posts to date
+* Visit other users' profile pages through the "Search User" function
+* See the 10 most recent posts (the "feed") on the home page
+* Spinning unicorns, because obvi
+* **Glitter**. Lots and lots of glitter
+
+
+**Please enjoy yourselves as you journey through the fabulous world of Glittr** :)
+
+## Languages & Technologies
+* HTML/erb
+* CSS
+* JavaScript
+* Ruby
+* Sinatra -- MVC Framework
